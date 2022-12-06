@@ -13,13 +13,13 @@ export default function App() {
   return (
     <View style={styles.container}>
     	<View style={styles.bloco}>
-			<Text style={style.titulo}>Calculadora Festa</Text>
+			<Text style={styles.titulo}>Calculadora Festa</Text>
 		</View>
-		  <View style={bloco}>
-			  <Text style={styles.Label}>QTD.Convidades</Text>
+		  <View style={styles.bloco}>
+			  <Text style={styles.label}>QTD.Convidades</Text>
 			  <TextInput
 				  style={styles.input}
-				  value={inputQtd}
+				  value={inputQtd}  
 				  onChangeText={(value) => setInputQtd(value)}
 			  />
 			  	  <TouchableOpacity style={styles.botao} onPress={enviaValor}>
@@ -27,7 +27,7 @@ export default function App() {
 			      </TouchableOpacity>
 		  </View>
 		  <View style={styles.bloco}>
-			  
+			  <Calcula qtd={qtd} />
 		  </View>
     </View>
   );
@@ -47,18 +47,20 @@ const styles = StyleSheet.create({
 	
 	
 	titulo:{
-		fontSize:'30'
+		fontSize:20,
+		marginLeft:'25git remote add origin https://github.com/EmanuelDeBrito/calculaFestaMobile.git%'
 	},
 	
 	
 	input:{
 		borderWidth:'1',
-		fontSize:'20',
+		fontSize:20,
 		width:'100%'
 	},
 	
 	
 	label:{
+		marginTop: '10%',
 		fontSize:'20'
 	},
 	
@@ -66,12 +68,13 @@ const styles = StyleSheet.create({
 	botao:{
 		width:'100%',
 		backgroundColor:'#000',
+		marginTop: '10%',
 		alignItems:'center'
 	},
 	
 	
-	textBotao:{
-		fontSize:'20',
+	txtBotao:{
+		fontSize:20,
 		color:'#fff'
 	},
 });
